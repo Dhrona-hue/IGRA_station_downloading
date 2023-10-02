@@ -13,8 +13,8 @@ from scipy import interpolate
 from datetime import datetime
 from siphon.simplewebservice.igra2 import IGRAUpperAir
 
-# Download the station list from the IGRA dataset and store it in '/tmp' directory
-stns = igra.download.stationlist('/tmp')
+# Download the station list from the IGRA dataset and store it in '/tmp' directory (in the path, you can use specific path where the data is to be downloaded)
+stns = igra.download.stationlist('path+/tmp')
 
 # Filter stations to select those with data available between 1980 and 2022 and within a latitude range of -30 to 30 degrees
 stns_ftr = stns.loc[(stns['start'] <= 1980) & (stns['end'] >= 2022)]
