@@ -1,10 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Sep 29 13:02:16 2023
-
 @author: Dhrona
 """
-####This is a python code to download the IGRA Radiosonde station datas accross the globe and export it into the required excel format
+####This is a python code to download the IGRA Radiosonde station datas across the globe and export it into the required excel format
 
 # Import necessary libraries
 import igra
@@ -37,7 +34,7 @@ stns_ftr3 = np.transpose(stns_ftr2)
 date = [datetime(1980, 1, 1, 0), datetime(2022, 12, 31, 12)]
 
 # Loop through a range of station numbers (1 to 123)
-for m in range(18,123):
+for m in range(0,123):
     # Get station ID, name, and latitude for the current station
     station = stns_ftr3.loc['id', m]
     stn_name = stns_ftr3.loc['name', m]
